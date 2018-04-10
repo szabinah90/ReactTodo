@@ -13,7 +13,7 @@ import TodoItem from './todoitem';
 class App extends React.Component {
   render () { // RENDERING COMPONENTS (TodoItem) AND PROPS (label="") see also todoitem.jsx
     return (
-      <ul>
+      <ul className='todo-list'>
         <TodoItem label='First task' />
         <TodoItem label='Second task' />
         <TodoItem label='Third task' />
