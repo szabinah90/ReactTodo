@@ -3,17 +3,17 @@ import React from 'react';
 class TodoItem extends React.Component {
   constructor (props) {
     super(props);
-    this.state = {isRed: false}; // state is an object, a map (js object, key-value pairs).
+    this.state = {isDone: false}; // state is an object, a map (js object, key-value pairs).
   }
 
-  changeColor () {
-    this.setState({isRed: !this.state.isRed});
+  changeDone () {
+    this.setState({isDone: !this.state.isDone});
   }
 
   render () { // RENDERING PROPS ({this.props.label}) see also firstComponent.jsx
     return (
-      <li onClick={this.changeColor.bind(this)}
-        style={{color: (this.state.isRed ? 'red' : '')}}>{this.props.label}</li>
+      <li onClick={this.changeDone.bind(this)}
+        style={{color: (this.state.isDone ? 'red' : '')}}>{this.props.label}</li>
     );
   }
 }
