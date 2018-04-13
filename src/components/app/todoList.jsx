@@ -2,25 +2,18 @@ import React from 'react';
 import TodoItem from './todoList/todoItem';
 
 class TodoList extends React.Component {
-  constructor (props) {
-    super(props);
-    this.state = {toDos: [
-      {label: 'First task'},
-      {label: 'Second task'},
-      {label: 'Third task'},
-      {label: 'Fourth task'},
-      {label: 'Fifth task'}
-    ]};
+  delete (label) {
+    this.props.delete(label);
   }
 
   render () { // RENDERING COMPONENTS (TodoItem) AND PROPS (label="") see also todoitem.jsx
-    let toDos = this.state.toDos.map(element => {
-      return <TodoItem label={element.label} key={element.label} />;
+    let toDos = this.props.toDos.map(toDo => {
+      return <TodoItem toDo={toDo} key={toDo.label} delete={this.delete.bind(this)} />;
     });
     return (
-      <ol className='todo-list'>
+      <ul className='todo-list'>
         {toDos}
-      </ol>
+      </ul>
     );
   }
 }

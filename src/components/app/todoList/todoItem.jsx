@@ -6,14 +6,23 @@ class TodoItem extends React.Component {
     this.state = {isDone: false}; // state is an object, a map (js object, key-value pairs).
   }
 
+  delete () {
+    this.props.delete(this.props.toDo.label);
+  }
+
   changeDone () {
-    this.setState({isDone: !this.state.isDone});
+    this.setState({ isDone: !this.state.isDone });
+    if (this.state.isDone === true) {
+      this.delete();
+    }
   }
 
   render () { // RENDERING PROPS ({this.props.label}) see also firstComponent.jsx
     return (
-      <li onClick={this.changeDone.bind(this)}
-        style={{color: (this.state.isDone ? 'red' : '')}}>{this.props.label}</li>
+      <li style={{color: (this.state.isDone ? 'grey' : '')}}>
+        <button type='button' onClick={this.delete.bind(this)}>R</button>
+        {this.props.toDo.label}
+      </li>
     );
   }
 }
