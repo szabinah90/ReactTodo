@@ -7,20 +7,18 @@ class TodoItem extends React.Component {
   }
 
   delete () {
+    this.toggleDisabled();
     this.props.delete(this.props.toDo.label);
   }
 
-  changeDone () {
-    this.setState({ isDone: !this.state.isDone });
-    if (this.state.isDone === true) {
-      this.delete();
-    }
+  toggleDisabled () {
+    this.setState({isDone: !this.state.isDone});
   }
 
   render () { // RENDERING PROPS ({this.props.label}) see also firstComponent.jsx
     return (
       <li style={{color: (this.state.isDone ? 'grey' : '')}}>
-        <button type='button' onClick={this.delete.bind(this)}>R</button>
+        <input id='box' type='checkbox' disabled={this.state.isDone} onClick={this.delete.bind(this)} />
         {this.props.toDo.label}
       </li>
     );

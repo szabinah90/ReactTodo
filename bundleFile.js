@@ -19502,7 +19502,9 @@ var App = function (_React$Component) {
 
     var _this = _possibleConstructorReturn(this, (App.__proto__ || Object.getPrototypeOf(App)).call(this, props));
 
-    _this.state = { toDos: [{ label: 'First task' }, { label: 'Second task' }, { label: 'Third task' }, { label: 'Fourth task' }, { label: 'Fifth task' }] };
+    _this.state = {
+      toDos: [{ label: 'First task' }, { label: 'Second task' }, { label: 'Third task' }, { label: 'Fourth task' }, { label: 'Fifth task' }]
+    };
     return _this;
   }
 
@@ -19517,15 +19519,19 @@ var App = function (_React$Component) {
   }, {
     key: 'delete',
     value: function _delete(label) {
-      var toDosArray = this.state.toDos;
-      var i = 0;
-      while (i < toDosArray.length && label !== toDosArray[i].label) {
-        i++;
-      }
-      if (i < toDosArray.length) {
-        toDosArray.splice(i, 1);
-        this.setState({ toDos: toDosArray });
-      }
+      var _this2 = this;
+
+      setTimeout(function () {
+        var toDosArray = _this2.state.toDos;
+        var i = 0;
+        while (i < toDosArray.length && label !== toDosArray[i].label) {
+          i++;
+        }
+        if (i < toDosArray.length) {
+          toDosArray.splice(i, 1);
+          _this2.setState({ toDos: toDosArray });
+        }
+      }, 2000);
     }
   }, {
     key: 'render',
@@ -19656,15 +19662,13 @@ var TodoItem = function (_React$Component) {
   _createClass(TodoItem, [{
     key: 'delete',
     value: function _delete() {
+      this.toggleDisabled();
       this.props.delete(this.props.toDo.label);
     }
   }, {
-    key: 'changeDone',
-    value: function changeDone() {
+    key: 'toggleDisabled',
+    value: function toggleDisabled() {
       this.setState({ isDone: !this.state.isDone });
-      if (this.state.isDone === true) {
-        this.delete();
-      }
     }
   }, {
     key: 'render',
@@ -19673,11 +19677,7 @@ var TodoItem = function (_React$Component) {
       return _react2.default.createElement(
         'li',
         { style: { color: this.state.isDone ? 'grey' : '' } },
-        _react2.default.createElement(
-          'button',
-          { type: 'button', onClick: this.delete.bind(this) },
-          'R'
-        ),
+        _react2.default.createElement('input', { id: 'box', type: 'checkbox', disabled: this.state.isDone, onClick: this.delete.bind(this) }),
         this.props.toDo.label
       );
     }
