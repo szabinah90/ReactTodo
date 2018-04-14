@@ -1,3 +1,4 @@
+import ListGroupItem from 'react-bootstrap/lib/ListGroupItem';
 import React from 'react';
 
 class TodoItem extends React.Component {
@@ -17,10 +18,10 @@ class TodoItem extends React.Component {
 
   render () { // RENDERING PROPS ({this.props.label}) see also firstComponent.jsx
     return (
-      <li style={{color: (this.state.isDone ? 'grey' : '')}}>
+      <ListGroupItem style={{color: (this.state.isDone ? 'grey' : '')}}>
         <input id='box' type='checkbox' disabled={this.state.isDone} onClick={this.delete.bind(this)} />
         {this.props.toDo.label}
-      </li>
+      </ListGroupItem>
     );
   }
 }

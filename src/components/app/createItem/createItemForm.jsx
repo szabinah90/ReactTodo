@@ -1,3 +1,4 @@
+import Button from 'react-bootstrap/lib/Button';
 import React from 'react';
 
 class CreateItemForm extends React.Component {
@@ -18,8 +19,8 @@ class CreateItemForm extends React.Component {
   render () {
     return (
       <form>
-        <input type='text' placeholder='Add to your list' value={this.state.inputValue} onChange={this.changeInputValue.bind(this)} />
-        <button type='button' onClick={this.submit.bind(this)}>Add</button>
+        <input className='my-input-field' type='text' placeholder='Add to your list' value={this.state.inputValue} onChange={this.changeInputValue.bind(this)} />
+        <Button bsStyle='warning' bsSize='large' type='button' onClick={this.submit.bind(this)}>Add</Button>
         <br />
       </form>
     );

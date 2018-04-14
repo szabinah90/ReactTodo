@@ -1,0 +1,28 @@
+body {
+  font-family: 'Dancing Script', cursive;
+}
+
+.my-jumbotron {
+  margin-bottom: 50px;
+  padding: 150px;
+  background-image: url('../css/To_Do_List.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: white;
+}
+
+h1 {
+  padding-left: 320px;
+}
+
+.list-group-item {
+  font-size: 35px;
+}
+
+.my-input-field {
+  width: 500px;
+  height: 40px;
+  margin: 50px;
+  font-size: 25px;
+  border-radius: 10px;
+}
