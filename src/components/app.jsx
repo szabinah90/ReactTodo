@@ -44,7 +44,7 @@ class App extends React.Component {
         toDosArray.splice(i, 1);
         this.setState({ toDos: toDosArray });
       }
-    }, 2000);
+    }, 1500);
   }
 
   render () { // RENDERING COMPONENTS (TodoListWrapper) see also todoitem.jsx

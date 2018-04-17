@@ -20,6 +20,7 @@ class TodoItem extends React.Component {
     return (
       <ListGroupItem style={{color: (this.state.isDone ? 'grey' : '')}}>
         <input id='box' type='checkbox' disabled={this.state.isDone} onClick={this.delete.bind(this)} />
+        <span class='checkmark' />
         {this.props.toDo.label}
       </ListGroupItem>
     );

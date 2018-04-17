@@ -15,8 +15,28 @@ h1 {
   padding-left: 320px;
 }
 
+#box {
+  position: relative;
+  top: 0;
+  left: 0;
+  height: 25px;
+  width: 25px;
+  background-color: #f0ad4e;
+}
+
 .list-group-item {
+  margin: auto;
+  width: 500px;
+  padding-left: 35px;
   font-size: 35px;
+}
+
+.list-group-item input {
+  margin-right: 25px;
+}
+
+form {
+  text-align: center;
 }
 
 .my-input-field {
