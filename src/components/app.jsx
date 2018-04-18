@@ -8,6 +8,7 @@ class Something {
 export default Something; // NO, NO SENOR!!!: export.modules = Something
 */
 import Jumbotron from 'react-bootstrap/lib/Jumbotron';
+import ModalFooter from 'react-bootstrap/lib/ModalFooter';
 import React from 'react';
 import TodoList from './app/todoList';
 import CreateItem from './app/createItem';
@@ -55,6 +56,9 @@ class App extends React.Component {
         </Jumbotron>
         <TodoList toDos={this.state.toDos} delete={this.delete.bind(this)} />
         <CreateItem submit={this.submit.bind(this)} />
+        <ModalFooter>
+          <p>Szabina Házi, Flow Academy © 2018.</p>
+        </ModalFooter>
       </div>
     );
   }

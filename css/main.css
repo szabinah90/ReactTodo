@@ -35,6 +35,10 @@ h1 {
   margin-right: 25px;
 }
 
+.list-group-item:hover {
+  background-color: #f0ad4e;
+}
+
 form {
   text-align: center;
 }
@@ -45,4 +49,10 @@ form {
   margin: 50px;
   font-size: 25px;
   border-radius: 10px;
+}
+
+.modal-footer {
+  background-color: #f0ad4e;
+  color: white;
+  font-size: 25px;
 }
