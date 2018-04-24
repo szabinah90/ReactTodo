@@ -22956,6 +22956,7 @@ var CreateItemForm = function (_React$Component) {
     value: function submit() {
       console.log('Submit successful!', this.state.inputValue);
       this.props.submit(this.state.inputValue);
+      this.setState({ inputValue: '' });
     }
   }, {
     key: 'changeInputValue',
