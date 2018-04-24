@@ -10,6 +10,7 @@ export default Something; // NO, NO SENOR!!!: export.modules = Something
 import Jumbotron from 'react-bootstrap/lib/Jumbotron';
 import ModalFooter from 'react-bootstrap/lib/ModalFooter';
 import React from 'react';
+import Navigation from './app/navbar';
 import TodoList from './app/todoList';
 import CreateItem from './app/createItem';
 
@@ -51,9 +52,8 @@ class App extends React.Component {
   render () { // RENDERING COMPONENTS (TodoListWrapper) see also todoitem.jsx
     return (
       <div className='todoListWrapper'>
-        <Jumbotron bsClass='my-jumbotron'>
-          <h1>Organize Your Life!</h1>
-        </Jumbotron>
+        <Jumbotron bsClass='my-jumbotron' />
+        <Navigation />
         <TodoList toDos={this.state.toDos} delete={this.delete.bind(this)} />
         <CreateItem submit={this.submit.bind(this)} />
         <ModalFooter>

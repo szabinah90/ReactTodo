@@ -3,16 +3,21 @@ body {
 }
 
 .my-jumbotron {
-  margin-bottom: 50px;
   padding: 150px;
   background-image: url('../css/To_Do_List.png');
   background-repeat: no-repeat;
   background-size: cover;
-  color: white;
 }
 
-h1 {
-  padding-left: 320px;
+.navbar-default {
+  background-color: #f0ad4e;
+  color: white;
+  font-size: 30px;
+  margin-bottom: 50px;
+}
+
+#my-nav-item {
+  color: white;
 }
 
 #box {
