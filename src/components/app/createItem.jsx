@@ -7,7 +7,7 @@ class CreateItem extends React.Component {
     this.props.submit(inputValue);
   }
 
-  render () { // RENDERING COMPONENTS (TodoListWrapper) see also todoitem.jsx
+  render () {
     return (
       <div className='createItemWrapper'>
         <CreateItemForm submit={this.submit.bind(this)} />
