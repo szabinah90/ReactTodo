@@ -14,7 +14,7 @@ class Navigation extends React.Component {
         </Navbar.Header>
         <Nav>
           <NavItem id='my-nav-item'>
-            Navigation1
+            Contact Info
           </NavItem>
           <NavItem id='my-nav-item'>
             Navigation2
