@@ -6,7 +6,7 @@ module.exports = {
     app: [__dirname, 'src/index.jsx'].join('/')
   },
   output: {
-    path: __dirname,
+    path: [__dirname, 'public'].join('/'), // if no join: __dirname + '/public'
     filename: 'bundleFile.js'
   },
   resolve: {

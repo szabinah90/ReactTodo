@@ -1,9 +1,10 @@
+import ListGroupItem from 'react-bootstrap/lib/ListGroupItem';
 import React from 'react';
 
 class TodoItem extends React.Component {
   constructor (props) {
     super(props);
-    this.state = {isDone: false}; // state is an object, a map (js object, key-value pairs).
+    this.state = {isDone: false};
   }
 
   delete () {
@@ -15,12 +16,13 @@ class TodoItem extends React.Component {
     this.setState({isDone: !this.state.isDone});
   }
 
-  render () { // RENDERING PROPS ({this.props.label}) see also firstComponent.jsx
+  render () {
     return (
-      <li style={{color: (this.state.isDone ? 'grey' : '')}}>
+      <ListGroupItem style={{color: (this.state.isDone ? 'grey' : '')}}>
         <input id='box' type='checkbox' disabled={this.state.isDone} onClick={this.delete.bind(this)} />
+        <span className='checkmark' />
         {this.props.toDo.label}
-      </li>
+      </ListGroupItem>
     );
   }
 }
