@@ -6,6 +6,7 @@ import TodoIndex from './app/todoIndex';
 import ContactIndex from './app/contactIndex';
 import { BrowserRouter } from 'react-router-dom';
 import { Route } from 'react-router';
+import ThankYou from './app/thankYou';
 
 class App extends React.Component {
   render () {
@@ -17,6 +18,7 @@ class App extends React.Component {
           <div>
             <Route path='/todos' component={TodoIndex} />
             <Route path='/contact' component={ContactIndex} />
+            <Route path='/thankyou' component={ThankYou} />
           </div>
           <ModalFooter>
             <p>Szabina Házi, Flow Academy © 2018.</p>
