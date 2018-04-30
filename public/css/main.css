@@ -48,15 +48,31 @@ form {
   text-align: center;
 }
 
+p {
+  font-size: 30px;
+}
+
 .my-input-field {
   width: 500px;
   height: 40px;
-  margin: 50px;
+  margin-top: 25px;
+  margin-bottom: 25px;
+  margin-right: 25px;
   font-size: 25px;
   border-radius: 10px;
 }
 
+.my-text-area {
+  font-size: 25px;
+  border-radius: 10px;
+  resize: none;
+  margin-top: 25px;
+  margin-bottom: 25px;
+}
+
+
 .modal-footer {
+  margin-top: 25px;
   background-color: #f0ad4e;
   color: white;
   font-size: 25px;
